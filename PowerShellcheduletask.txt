@@ -1,0 +1,6 @@
+schtasks /CREATE /TN testScript /TR "powershell.exe `
+-noprofile -executionpolicy Unrestricted `
+-file C:\Users\Ashish\Scripts\test.ps1" /IT /RL HIGHEST /SC MINUTE
+
+
+schtasks /DELETE /TN CheckHealthScript
