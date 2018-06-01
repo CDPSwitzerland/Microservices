@@ -14,14 +14,13 @@ response = client.get_metric_statistics(
                 },
         ],
         StartTime=datetime(2018, 5, 01) - timedelta(seconds=600),
-        EndTime=datetime(2018, 5, 29),
+        EndTime=datetime(2018, 6, 01),
         Period=86400,
         Statistics=['Average',
         ],
         Unit='Percent'
 )
 #print(response)
-time.sleep(10)
 for cpu in response['Datapoints']:
   print(cpu)
 
